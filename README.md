@@ -1,23 +1,25 @@
-# mcp-lichess
+# @pipeworx/lichess
 
-Lichess MCP — public read-only API for users, games, explorer, tablebase.
+[Lichess.org](https://lichess.org) public API MCP — player profiles, games, broadcasts, opening explorer, tablebase. Keyless.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `user` | Player profile with ratings across all variants. |
-| `users` | Bulk lookup of up to 300 users by username. |
-| `user_status` | Online / playing status for the given usernames (up to 100). |
-| `user_performance` | Single-variant performance + best rated game for a user. |
-| `top_players` | Top-rated players for one variant. |
-| `leaderboards` | Top-10 across all variants in one call. |
-| `tv_channels` | Currently-featured TV games per variant. |
-| `cloud_eval` | Stockfish cloud evaluation for a FEN position. |
-| `tablebase` | Syzygy tablebase lookup (≤7 pieces). Variant: standard (default), atomic, antichess. |
-| `opening_explorer` | Opening explorer. scope: "lichess" (community), "masters" (top 2200+ humans), "player" (single user). |
+- `user(username)` — player profile + ratings across variants
+- `users(usernames[])` — bulk lookup (up to 300)
+- `user_status(usernames[])` — online / playing status
+- `user_performance(username, perf)` — single-variant performance + best rated game
+- `top_players(perf, limit?)` — top players for a variant (bullet/blitz/rapid/classical/etc.)
+- `leaderboards()` — top 10 across all variants
+- `tv_channels()` — currently-featured TV games per variant
+- `cloud_eval(fen, multi_pv?)` — engine cloud eval for a FEN position
+- `tablebase(fen, variant?)` — Syzygy tablebase result (≤7 pieces)
+- `opening_explorer(scope, fen|play, ...)` — Lichess / masters / player opening DB
+
+## Data source
+
+`https://lichess.org/api`, `https://explorer.lichess.ovh`, `https://tablebase.lichess.ovh`.
 
 ## Quick Start
 
@@ -33,7 +35,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -57,7 +59,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
