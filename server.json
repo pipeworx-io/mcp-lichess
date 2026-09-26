@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/lichess",
   "title": "Lichess",
   "description": "Lichess MCP — public read-only API for users, games, explorer, tablebase.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://pipeworx.io/packs/lichess",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-lichess",
