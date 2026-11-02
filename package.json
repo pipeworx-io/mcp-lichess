@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-lichess",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Lichess MCP — public read-only API for users, games, explorer, tablebase.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "lichess",
     "gatewaySlug": "lichess",
-    "sourceHash": "v1-5e9df64632b9c4573ccd30bc1fdf629f7089e879d373f290b12bba89edc59c74",
-    "sourceCommit": "5c89d6abb778d45da5d92002eb251978622bedf9"
+    "sourceHash": "v1-ab0e12884abf0aa75cb1d65d9d8b34b31d724103f9b06909c4e65f84babda759",
+    "sourceCommit": "236b0a46d91f343fe094da9f499c378e88f78312"
   }
 }
